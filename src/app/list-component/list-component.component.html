@@ -6,7 +6,6 @@
             </div>
             <div class="title-icon-container">
                 <mat-icon>edit</mat-icon>
-                <mat-icon>delete</mat-icon>
             </div>
         </mat-card-header>
         <mat-card-content class="custom-content">
@@ -14,17 +13,19 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Description</th>
+                        <th (click)="orderBy('title')">Title</th>
+                        <th (click)="orderBy('category')">Category</th>
+                        <th (click)="orderBy('description')">Description</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
-                <tbody *ngFor="let info of tasks">
+                <tbody *ngFor="let info of tasks; let i = index;">
                     <tr>
-                        <td>{{info.id}}</td>
+                        <td>{{i}}</td>
                         <td>{{info.title}}</td>
                         <td>{{info.category}}</td>
                         <td>{{info.description}}</td>
+                        <td><mat-icon (click)="delete(info)">delete</mat-icon></td>
                     </tr>
 
                 </tbody>

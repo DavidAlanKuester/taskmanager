@@ -72,6 +72,9 @@
         td {
             padding-left: 8px;
             padding-right: 8px;
+            mat-icon {
+                cursor: pointer;
+            }
         }
         tr:nth-of-type(even) {
             background-color: rgb(242, 242, 247);

@@ -1,6 +1,7 @@
 import { variable } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/models/task.class';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-create-task-component',
@@ -12,7 +13,7 @@ export class CreateTaskComponentComponent implements OnInit {
   task: Task = new Task();
   public tasks: Array<Task> = [];
 
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
    // localStorage.setItem('tasks', JSON.stringify(this.tasks));
@@ -40,6 +41,13 @@ export class CreateTaskComponentComponent implements OnInit {
 
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
     this.task = new Task();
+    this.openSnackBar('The Task is save and sound in your local storage 🙌');
+  }
+
+  openSnackBar(message: string) {
+    this._snackBar.open(message, null, {
+      duration: 4000,
+    });
   }
 
 }

@@ -12,6 +12,8 @@ import { ListComponentComponent } from './list-component/list-component.componen
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    MatSnackBarModule,
     FormsModule
   ],
   providers: [],
