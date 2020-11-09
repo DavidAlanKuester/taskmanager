@@ -1,0 +1,83 @@
+.vocabulary-page {
+    height: 80vh;
+    display: flex;
+}
+
+.custom-card {
+    min-width: 80%;
+    margin: 2%;
+}
+
+.custom-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.title-name-container {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title-icon-container {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    mat-icon:hover {
+        cursor: pointer;
+    }
+}
+
+.data-table {
+    height: 50vh;
+    width: 80vw;
+}
+
+.content-table {
+    border-collapse: collapse;
+    overflow: hidden;
+    font-size: 0.9em;
+    min-width: 100%;
+
+    thead {
+        tr {
+            background-color: rgb(0, 19, 70);
+            color: white;
+            text-align: left;
+            font-weight: bold;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        th {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+    }
+    tbody {
+        tr {
+            border-bottom: 1px solid  rgb(221, 221, 231);
+
+        }
+        td {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        tr:nth-of-type(even) {
+            background-color: rgb(242, 242, 247);
+        }
+        tr:last-of-type {
+            border-bottom: 2px solid  rgb(1, 0, 70);
+        }
+    }
+}

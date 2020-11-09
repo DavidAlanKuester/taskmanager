@@ -1,0 +1,53 @@
+.create-task-form-field {
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.task-form-title-section, .task-form-description-section  {
+    min-height: 10vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    h3 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 8px;
+        min-width: 100px;
+    }
+    input {
+        width: 300px;
+    }
+}
+
+.task-form-category-section {
+    min-height: 10vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    h3 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 8px;
+        min-width: 100px;
+    }
+    select {
+        width: 200px;
+    }
+
+
+}
+
+.task-form-btn-section {
+    min-height: 10vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

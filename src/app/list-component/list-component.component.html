@@ -1,0 +1,33 @@
+<div class="vocabulary-page">
+    <mat-card class="mb-32 custom-card">
+        <mat-card-header class="title-container">
+            <div class="title-name-container">
+                <mat-card-title>Your Personal Tasks</mat-card-title>
+            </div>
+            <div class="title-icon-container">
+                <mat-icon>edit</mat-icon>
+                <mat-icon>delete</mat-icon>
+            </div>
+        </mat-card-header>
+        <mat-card-content class="custom-content">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let info of tasks">
+                    <tr>
+                        <td>{{info.id}}</td>
+                        <td>{{info.title}}</td>
+                        <td>{{info.category}}</td>
+                        <td>{{info.description}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </mat-card-content>
+    </mat-card>

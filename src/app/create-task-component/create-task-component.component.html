@@ -1,0 +1,28 @@
+<div class="create-task-form-field">
+    <div class="task-form-title-section">
+        <h3>Titel</h3>
+        <input [(ngModel)]="task.title" placeholder="Enter your Title">
+    </div>
+
+    <div class="task-form-category-section">
+        <h3>Category</h3>
+        <div>
+            <select [(ngModel)]="task.category" id="categoryInput" name="category-input">
+                <option value=""></option>
+                <option value="Homework">Homework</option>
+                <option value="Business">Business</option>
+                <option value="Administration">Administration</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="task-form-description-section">
+        <h3>Description</h3>
+        <input style="height: 100px;" [(ngModel)]="task.description" placeholder="Enter your Description">
+    </div>
+
+    <div class="task-form-btn-section">
+        <button (click)="saveTask()" [disabled]="task.title.length == 0 || task.category.length == 0 || task.description.length == 0" mat-raised-button color="primary">Create new task</button>
+    </div>
+</div>
